@@ -8,7 +8,7 @@ const heroImage = {
 function Header() {
     return(
         <section className="hero" style={heroImage}>
-        <div>
+        <div className="subtext">
             <h2>Always a work in progress</h2>
         </div>
     </section>

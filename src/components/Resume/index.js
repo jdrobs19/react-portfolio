@@ -3,10 +3,17 @@ import resume from '../../assets/img/resume.pdf';
 
 function Resume() {
    return (
-      <section>
-         <h2>Resume</h2> 
-         <iframe src={resume} title='Resume' type='application/pdf' width='100%' height='100%' />
-      </section>
+
+      <section className="section">
+         <article id="section">
+         <div className="section-title">
+            <h2>Resume</h2>
+         </div>
+         <div className="section-info ">
+            <p><a href={resume} download="resume.pdf" target="_blank" rel="noopener noreferrer">View my resume</a></p>
+         </div>
+         </article>
+      </section >
    );
 }
 

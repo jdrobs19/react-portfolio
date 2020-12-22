@@ -44,12 +44,12 @@ function Portfolio() {
   ];
 
   return (
-    <section className="content">
+    <section className="section">
       <article id="work">
-        <div className="content-title">
+        <div className="section-title">
           <h2>Portfolio</h2>
         </div>
-        <div className="content-body work">
+        <div className="section-info work">
           {projects.map(project => (
             <Project {...project}
               key={project.id}
