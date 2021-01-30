@@ -34,8 +34,8 @@ function Portfolio() {
       id: 3
     },
     {
-      name: 'Coming Soon',
-      url: 'https://jdrobs19.github.io/portfolio/',
+      name: 'Dino Store',
+      url: 'https://limitless-refuge-02623.herokuapp.com/',
       bgStyle: {
         backgroundImage: "url( " + bgImg4 + ")"
       },
