@@ -1,29 +1,18 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.c94f7442.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.7886cf85.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.7886cf85.chunk.js.map",
-    "runtime-main.js": "/react-portfolio/static/js/runtime-main.ae413aa4.js",
-    "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.ae413aa4.js.map",
-    "static/js/2.67583f55.chunk.js": "/react-portfolio/static/js/2.67583f55.chunk.js",
-    "static/js/2.67583f55.chunk.js.map": "/react-portfolio/static/js/2.67583f55.chunk.js.map",
-    "static/js/3.d0991611.chunk.js": "/react-portfolio/static/js/3.d0991611.chunk.js",
-    "static/js/3.d0991611.chunk.js.map": "/react-portfolio/static/js/3.d0991611.chunk.js.map",
+    "main.css": "/react-portfolio/static/css/main.0f808ea2.css",
+    "main.js": "/react-portfolio/static/js/main.469b2542.js",
+    "static/js/422.2776a0bb.chunk.js": "/react-portfolio/static/js/422.2776a0bb.chunk.js",
+    "static/media/header_img.jpg": "/react-portfolio/static/media/header_img.b542809afdf7b55e3920.jpg",
+    "static/media/resume.pdf": "/react-portfolio/static/media/resume.732e28106f6321cce0c5.pdf",
+    "static/media/profile.jpg": "/react-portfolio/static/media/profile.b1f6cb7b13527232b1f2.jpg",
     "index.html": "/react-portfolio/index.html",
-    "static/css/main.c94f7442.chunk.css.map": "/react-portfolio/static/css/main.c94f7442.chunk.css.map",
-    "static/js/2.67583f55.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.67583f55.chunk.js.LICENSE.txt",
-    "static/media/header_img.b542809a.jpg": "/react-portfolio/static/media/header_img.b542809a.jpg",
-    "static/media/mood-music.8dd90bbb.png": "/react-portfolio/static/media/mood-music.8dd90bbb.png",
-    "static/media/placeholder-2.56a6beef.jpg": "/react-portfolio/static/media/placeholder-2.56a6beef.jpg",
-    "static/media/placeholder-3.1026a739.jpg": "/react-portfolio/static/media/placeholder-3.1026a739.jpg",
-    "static/media/profile.36f6c238.jpg": "/react-portfolio/static/media/profile.36f6c238.jpg",
-    "static/media/resume.fb63692c.pdf": "/react-portfolio/static/media/resume.fb63692c.pdf",
-    "static/media/run-buddy.3abee149.png": "/react-portfolio/static/media/run-buddy.3abee149.png"
+    "main.0f808ea2.css.map": "/react-portfolio/static/css/main.0f808ea2.css.map",
+    "main.469b2542.js.map": "/react-portfolio/static/js/main.469b2542.js.map",
+    "422.2776a0bb.chunk.js.map": "/react-portfolio/static/js/422.2776a0bb.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.ae413aa4.js",
-    "static/js/2.67583f55.chunk.js",
-    "static/css/main.c94f7442.chunk.css",
-    "static/js/main.7886cf85.chunk.js"
+    "static/css/main.0f808ea2.css",
+    "static/js/main.469b2542.js"
   ]
 }
