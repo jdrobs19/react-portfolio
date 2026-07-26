@@ -3,30 +3,54 @@ import './App.css';
 import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
+// import Portfolio from './components/Portfolio';
 import Nav from './components/Nav';
-import Resume from './components/Resume';
 
 function App() {
 
   const [categories] = useState([
     { name: 'About', id: 'about' },
-    { name: 'Portfolio', id: 'portfolio' },
-    { name: 'Contact', id: 'contact' },
-    { name: 'Resume', id: 'resume' }
+    // { name: 'Portfolio', id: 'portfolio' },
+    { name: 'Resume', id: 'resume' },
   ])
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
+  const handleCategoryClick = (category) => {
+    setCurrentCategory(category);
+    
+    setTimeout(() => {
+      const header = document.querySelector('header');
+      const headerHeight = header ? header.offsetHeight : 80;
+      
+      // If About is clicked, scroll to the about section with offset for sticky header
+      if (category.name === 'About') {
+        const aboutSection = document.querySelector('.about-section');
+        if (aboutSection) {
+          const targetPosition = aboutSection.offsetTop - headerHeight - 10;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      }
+      
+      // If Resume is clicked, scroll to the Willis section with offset for sticky header
+      if (category.name === 'Resume') {
+        const willisSection = document.querySelector('.willis-section');
+        if (willisSection) {
+          const targetPosition = willisSection.offsetTop - headerHeight - 10;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      }
+    }, 0);
+  };
+
  const renderCategory = () => {
     switch (currentCategory.name) {
-      case 'Portfolio':
-        return <Portfolio />;
+      // case 'Portfolio':
+      //   return <Portfolio />;
       case 'Resume':
-        return <Resume />;
-      case 'Contact':
-        return <Contact />
+        return <About />;
+      // case 'Contact':
+      //   return <Contact />
       default:
         return <About />
     }
@@ -35,7 +59,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Nav categories={categories} setCurrentCategory={setCurrentCategory} currentCategory={currentCategory} />
+      <Nav categories={categories} setCurrentCategory={handleCategoryClick} currentCategory={currentCategory} />
       <main>
         {renderCategory()}
       </main>

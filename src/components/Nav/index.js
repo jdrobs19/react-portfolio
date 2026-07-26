@@ -10,10 +10,12 @@ function Nav(props) {
   useEffect(() => {
     document.title = currentCategory.name;
   }, [currentCategory]);
+  
   return (
     <header>
       <div className="header-name">
         <h1>Jordan Roberts</h1>
+        <p className="contact-info">Herriman, UT | jdrobs19@gmail.com | 801-455-0430</p>
       </div>
       <nav>
         <ul>

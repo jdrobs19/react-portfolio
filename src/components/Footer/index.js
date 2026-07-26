@@ -12,9 +12,6 @@ function Footer() {
                     <li>
                         <a href="https://www.linkedin.com/in/jordan-roberts-a532791b1/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </li>
-                    <li>
-                        <a href="https://twitter.com/Jdrob19" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    </li>
                 </ul>
             </div>
         </footer>

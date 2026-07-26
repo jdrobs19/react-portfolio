@@ -31,10 +31,25 @@ h2{
 header{
   background-color: var(--primary-color);
   text-align: right;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   margin-bottom: 15px;
   padding: 0 10px 0 25px;
   border-radius: 0 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-name{
+  text-align: left;
+}
+
+.contact-info{
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
 }
 
 nav{
@@ -91,20 +106,25 @@ footer ul li a{
 }
 
 .profile-img{
-  width: 25%;
-  height: 80%;
-  margin-left: 100px;
+  width: 10%;
+  /* height: 50%; */
+  margin-left: 20px;
+  flex-shrink: 0;
   border-radius: 15px;
   border: 2px solid var(--teritary-color);
 }
 
 .section{
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .section article{
   padding: 15px;
   display: flex;
+  flex: 1;
   color: var(--primary-color);
 }
 
@@ -113,20 +133,71 @@ footer ul li a{
   border-right: 3px solid var(--teritary-color);
   font-weight: bold;
   font-size: 2.5vw;
-  text-align: right;
-  justify-content: flex-end;
-  padding: 15px;
-  width: 15%;
+  padding: 15px 15px 15px 0;
+  flex-shrink: 0;
+  align-items: flex-start;
+  max-width: 350px;
+}
+
+.section-title h2{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.2;
 }
 
 .section-info{
-  width: 85%;
+  width: auto;
   padding: 15px
 }
 
 .section-info p{
   margin: 10px;
   font-size: 1.5vw;
+}
+
+.job-position{
+  margin-bottom: 30px;
+}
+
+.job-position h3{
+  font-size: 1.8vw;
+  color: var(--primary-color);
+  margin: 15px 0 5px 0;
+}
+
+.job-details{
+  font-size: 1.2vw;
+  color: #666;
+  margin: 5px 10px;
+  font-style: italic;
+}
+
+.job-bullets{
+  list-style-position: inside;
+  margin: 10px;
+}
+
+.job-bullets li{
+  font-size: 1.5vw;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.resume-link{
+  font-size: 0.8vw;
+  margin-top: 30px;
+  text-align: center;
+  color: #666;
+}
+
+.resume-link a{
+  text-decoration: none;
+  color: var(--teritary-color);
+}
+
+.resume-link a:hover{
+  text-decoration: underline;
 }
 
 .work{
@@ -231,4 +302,177 @@ margin-bottom: 10px;
 label {
 display: block;
 margin-bottom: 8px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  h1{
+    font-size: 7vw;
+  }
+
+  h2{
+    font-size: 6vw;
+  }
+
+  header{
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-name{
+    width: 100%;
+  }
+
+  .contact-info{
+    font-size: 0.7rem;
+  }
+
+  nav{
+    padding-right: 0;
+  }
+
+  header nav ul li{
+    font-size: 3vw;
+    padding: 5px;
+    margin: 2px;
+  }
+
+  .profile-img{
+    width: 25%;
+    margin-left: 10px;
+  }
+
+  .section{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .section article{
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .section-title{
+    border-right: none;
+    border-bottom: 3px solid var(--teritary-color);
+    font-size: 5vw;
+    padding: 0 0 10px 0;
+    max-width: none;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .section-info{
+    padding: 10px 0;
+  }
+
+  .section-info p{
+    font-size: 4vw;
+  }
+
+  .job-position{
+    margin-bottom: 20px;
+  }
+
+  .job-position h3{
+    font-size: 4.5vw;
+  }
+
+  .job-details{
+    font-size: 3vw;
+  }
+
+  .job-bullets li{
+    font-size: 3.5vw;
+    margin: 8px 0;
+  }
+
+  .resume-link{
+    font-size: 2.5vw;
+    margin-top: 20px;
+  }
+
+  .work{
+    grid-template-columns: 1fr;
+  }
+
+  .work-item {
+    height: 50vw;
+  }
+
+  .work div .work-label h3 {
+    font-size: 4vw;
+  }
+
+  .work div .work-label h4 {
+    font-size: 3vw;
+  }
+
+  .contact-me-links ul li a {
+    font-size: 6vw;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 15px 20px;
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  h1{
+    font-size: 8vw;
+  }
+
+  h2{
+    font-size: 7vw;
+  }
+
+  header nav ul li{
+    font-size: 3.5vw;
+    padding: 3px;
+    margin: 1px;
+  }
+
+  .contact-info{
+    font-size: 0.65rem;
+  }
+
+  .profile-img{
+    width: 30%;
+    margin-left: 5px;
+  }
+
+  .section-title{
+    font-size: 6vw;
+    padding: 0 0 8px 0;
+  }
+
+  .section-info p{
+    font-size: 4.5vw;
+  }
+
+  .job-position h3{
+    font-size: 5vw;
+  }
+
+  .job-details{
+    font-size: 3.5vw;
+  }
+
+  .job-bullets li{
+    font-size: 4vw;
+    margin: 6px 0;
+  }
 }
