@@ -46,6 +46,43 @@ function About() {
                     </div>
                 </article>
             </section>
+            <section id="skills" className="section skills-section" aria-labelledby="skills-title">
+                <article>
+                    <div className="section-title">
+                        <h2 id="skills-title">Core Skills</h2>
+                    </div>
+                    <div className="skills-grid">
+                        <div className="skill-group">
+                            <p className="skill-group-label">Frontend</p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>TypeScript</li>
+                            </ul>
+                        </div>
+                        <div className="skill-group">
+                            <p className="skill-group-label">Backend &amp; Cloud</p>
+                            <ul>
+                                <li>C#</li>
+                                <li>Python</li>
+                                <li>Azure (App Insights/CosmosDB)</li>
+                                <li>Jest/XUnit testing</li>
+                            </ul>
+                        </div>
+                        <div className="skill-group">
+                            <p className="skill-group-label">Data &amp; Delivery</p>
+                            <ul>
+                                <li>SQL Server</li>
+                                <li>MongoDB</li>
+                                <li>GitHub Copilot</li>
+                                <li>CI/CD</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
             <div id="experience" className="experience-section" ref={willisSectionRef}>
                 <Willis />
             </div>

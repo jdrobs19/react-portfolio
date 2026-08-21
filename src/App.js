@@ -10,6 +10,7 @@ function App() {
 
   const [categories] = useState([
     { name: 'About', id: 'about' },
+    { name: 'Skills', id: 'skills' },
     // { name: 'Portfolio', id: 'portfolio' },
     { name: 'Resume', id: 'resume' },
   ])
@@ -28,6 +29,14 @@ function App() {
         const aboutSection = document.querySelector('.about-section');
         if (aboutSection) {
           const targetPosition = aboutSection.offsetTop - headerHeight - 10;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      }
+
+      if (category.name === 'Skills') {
+        const skillsSection = document.querySelector('#skills');
+        if (skillsSection) {
+          const targetPosition = skillsSection.offsetTop - headerHeight - 10;
           window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
       }

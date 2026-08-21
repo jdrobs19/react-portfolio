@@ -247,6 +247,54 @@ footer ul li a{
   color: #35433e;
 }
 
+.skills-section{
+  padding-top: 35px;
+  padding-bottom: 85px;
+}
+
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 4vw, 64px);
+  width: 100%;
+  max-width: 780px;
+}
+
+.skill-group{
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.skill-group-label{
+  margin: 0 0 14px;
+  color: var(--rust);
+  font: 500 0.68rem 'DM Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skill-group ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-group li{
+  position: relative;
+  padding-left: 16px;
+  margin: 8px 0;
+  color: #35433e;
+  font-size: clamp(0.86rem, 1.1vw, 0.98rem);
+}
+
+.skill-group li::before{
+  content: '/';
+  position: absolute;
+  left: 0;
+  color: var(--rust);
+  font-family: 'DM Mono', monospace;
+}
+
 .job-position{
   margin-bottom: 52px;
 }
@@ -617,5 +665,16 @@ margin-bottom: 8px;
   .job-bullets li{
     font-size: 4vw;
     margin: 6px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-section{
+    padding-top: 35px;
+  }
+
+  .skills-grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
