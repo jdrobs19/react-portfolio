@@ -8,23 +8,27 @@ function Nav(props) {
   } = props;
 
   useEffect(() => {
-    document.title = currentCategory.name;
+  document.title = `${currentCategory.name} | Jordan Roberts`;
   }, [currentCategory]);
   
   return (
     <header>
       <div className="header-name">
         <h1>Jordan Roberts</h1>
-        <p className="contact-info">Herriman, UT | jdrobs19@gmail.com | 801-455-0430</p>
+        <p className="contact-info">
+          Herriman, UT | <a href="mailto:jdrobs19@gmail.com">jdrobs19@gmail.com</a> | <a href="tel:+18014550430">801-455-0430</a>
+        </p>
       </div>
-      <nav>
+      <nav aria-label="Primary navigation">
         <ul>
           {categories.map((category) => (
-            <li
-              className={` ${currentCategory.name === category.name && 'selectedCategory'}`}
-              key={category.id} onClick={() => {
-                setCurrentCategory(category);
-              }}>{category.name}</li>
+            <li key={category.id}>
+              <button
+                className={currentCategory.name === category.name ? 'selectedCategory' : ''}
+                type="button"
+                onClick={() => setCurrentCategory(category)}
+              >{category.name}</button>
+            </li>
           ))}
         </ul>
       </nav>

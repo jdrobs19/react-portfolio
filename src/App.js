@@ -34,7 +34,7 @@ function App() {
       
       // If Resume is clicked, scroll to the Willis section with offset for sticky header
       if (category.name === 'Resume') {
-        const willisSection = document.querySelector('.willis-section');
+        const willisSection = document.querySelector('#experience');
         if (willisSection) {
           const targetPosition = willisSection.offsetTop - headerHeight - 10;
           window.scrollTo({ top: targetPosition, behavior: 'smooth' });
@@ -58,9 +58,10 @@ function App() {
 
   return (
     <div>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
       <Header />
       <Nav categories={categories} setCurrentCategory={handleCategoryClick} currentCategory={currentCategory} />
-      <main>
+      <main id="main-content">
         {renderCategory()}
       </main>
 
